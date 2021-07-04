@@ -90,3 +90,20 @@ python2104E
 
 C:\Windows\System32>
 ```
+
+## 5. Check packages installed in your virtualenv
+```
+C:\Windows\System32>workon python2104E
+(python2104E) C:\Windows\System32>pip freeze
+
+(python2104E) C:\Windows\System32>pip list
+Package    Version
+---------- -------
+pip        21.1.2
+setuptools 57.0.0
+wheel      0.36.2
+WARNING: You are using pip version 21.1.2; however, version 21.1.3 is available.
+You should consider upgrading via the 'C:\Users\phuoctm8\Envs\python2104E\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(python2104E) C:\Windows\System32>
+```
