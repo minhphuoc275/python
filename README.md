@@ -1,6 +1,6 @@
 # python
 
-1. Install VirtualENV via pip:
+## 1. Install VirtualENV via pip:
 ```
 C:\Windows\system32>pip install virtualenv
 Collecting virtualenv
@@ -20,10 +20,10 @@ Successfully installed appdirs-1.4.4 distlib-0.3.2 filelock-3.0.12 six-1.16.0 vi
 
 C:\Windows\system32>
 ```
-2. Check if Register script folder to Windows Path ENV:
+## 2. Check if Register script folder to Windows Path ENV:
 - Go to "C:\Users\<username>\AppData\Local\Programs\Python\Python39\Scripts"
 
-3. Install virtualenvwrapper (https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+## 3. Install virtualenvwrapper (https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 ```
 C:\Windows\system32>pip install virtualenvwrapper-win
 Collecting virtualenvwrapper-win
@@ -41,7 +41,7 @@ Successfully installed virtualenvwrapper-win-1.2.6
 C:\Windows\system32>
 ```
 
-4. Using:
+## 4. Using:
 ```
 C:\Windows\system32>lsvirtualenv
 
