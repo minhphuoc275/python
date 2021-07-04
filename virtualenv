@@ -61,6 +61,30 @@ dir /b /ad "C:\Users\phuoctm8\Envs"
 ==============================================================================
 python2104E
 
-(python2104E) C:\Windows\System32>workon python2104E
-(python2104E) C:\Windows\System32>
+(python2104E) C:\Windows\System32>mkvirtualenv test01
+created virtual environment CPython3.9.5.final.0-64 in 688ms
+  creator CPython3Windows(dest=C:\Users\phuoctm8\Envs\test01, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\phuoctm8\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==21.1.2, setuptools==57.0.0, wheel==0.36.2
+  activators BashActivator,BatchActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+
+(test01) C:\Windows\System32>lsvirtualenv
+
+dir /b /ad "C:\Users\phuoctm8\Envs"
+==============================================================================
+python2104E
+test01
+
+(test01) C:\Windows\System32>rmvirtualenv test01
+
+    Deleted C:\Users\phuoctm8\Envs\test01
+
+
+C:\Windows\System32>lsvirtualenv
+
+dir /b /ad "C:\Users\phuoctm8\Envs"
+==============================================================================
+python2104E
+
+C:\Windows\System32>
 ```
