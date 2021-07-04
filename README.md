@@ -20,7 +20,7 @@ Successfully installed appdirs-1.4.4 distlib-0.3.2 filelock-3.0.12 six-1.16.0 vi
 
 C:\Windows\system32>
 ```
-## 2. Check if Register script folder to Windows Path ENV:
+## 2. Check if Registered script folder to Windows Path ENV:
 - Go to "C:\Users\<username>\AppData\Local\Programs\Python\Python39\Scripts"
 
 ## 3. Install virtualenvwrapper (https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
