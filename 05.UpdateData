@@ -1,0 +1,65 @@
+# 1. forms.py
+## Add new form or can use the old form "addjobs"
+```
+class jobsform(ModelForm):
+    class Meta:
+        model = jobs
+        fields = "__all__" ## get all fields of table jobs
+```
+
+# 2. views.py
+## UpdateJobs
+```
+from django.shortcuts import redirect, render, get_list_or_404
+from .forms import addjobs, adddeps, addemps, jobsform
+
+def UpdateJob(request, jobid):
+    job_data = get_object_or_404(jobs,id=jobid) # The same with jobs.objects.get(id=jobid)
+    job_form = jobsform(instance=job_data)
+    if request.method == "POST":
+        job_data.job_name = request.POST.get('job_name',job_data.job_name)
+        job_data.save()
+        return redirect("index")
+    return render(
+        request=request,
+        template_name="jobs/update_job.html",
+        context={
+            'jobdata': job_form
+        }
+    )
+```
+
+# 3. jobs/update_job.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Job Records</title>
+</head>
+<body>
+    <p><h1>Update new value below: </h1></p>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr> 
+                {{ jobdata.as_table }}
+            </tr>    
+        </table>
+        <input type="submit" value="Update Job Name">
+    </form>   
+</body>
+</html>
+```
+
+# 4. urls.py
+Add below:
+```
+    url(r"updatejob/(?P<jobid>[0-9]+)$", views.UpdateJob, name="UpdateJob")
+```
+
+# Result:
+ 
+![alt text](https://github.com/minhphuoc275/python/blob/main/images/05_updatedata.png "Adding page")
